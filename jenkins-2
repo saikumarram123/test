@@ -11,10 +11,10 @@ pipeline {
     }
     stage('Front-end') {
       agent {
-        docker { image 'docker pull mysql' }
+        docker { image 'mysql:5.7' }
       }
       steps {
-        sh 'node --version'
+        sh 'mysql --version'
       }
     }
   }
